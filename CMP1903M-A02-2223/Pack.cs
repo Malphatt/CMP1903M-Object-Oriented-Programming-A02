@@ -76,7 +76,7 @@
             for (int i = 0; i < 52; i++) {
                 pack.Add(new Card((i / 13) + 1, (i % 13) + 1));
             }
-            Console.WriteLine("The pack has been reset\n");
+            // Console.WriteLine("The pack has been reset\n");
         }
     }
 }
