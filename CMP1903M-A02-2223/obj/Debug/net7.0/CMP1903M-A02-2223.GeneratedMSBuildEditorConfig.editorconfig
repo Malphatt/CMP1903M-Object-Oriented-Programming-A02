@@ -1,0 +1,11 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CMP1903M_A02_2223
+build_property.ProjectDir = C:\Users\Malphatt\OneDrive\Documents\__Work__\University\Year 1\CMP1903M (Object-Oriented Programming)\Assessment 2\CMP1903M-Object-Oriented-Programming-A02\CMP1903M-A02-2223\

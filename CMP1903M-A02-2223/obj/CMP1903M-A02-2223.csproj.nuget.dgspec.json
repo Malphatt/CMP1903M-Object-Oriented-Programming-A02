@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Malphatt\\OneDrive\\Documents\\__Work__\\University\\Year 1\\CMP1903M (Object-Oriented Programming)\\Assessment 2\\CMP1903M-Object-Oriented-Programming-A02\\CMP1903M-A02-2223\\CMP1903M-A02-2223.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Malphatt\\OneDrive\\Documents\\__Work__\\University\\Year 1\\CMP1903M (Object-Oriented Programming)\\Assessment 2\\CMP1903M-Object-Oriented-Programming-A02\\CMP1903M-A02-2223\\CMP1903M-A02-2223.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Malphatt\\OneDrive\\Documents\\__Work__\\University\\Year 1\\CMP1903M (Object-Oriented Programming)\\Assessment 2\\CMP1903M-Object-Oriented-Programming-A02\\CMP1903M-A02-2223\\CMP1903M-A02-2223.csproj",
+        "projectName": "CMP1903M-A02-2223",
+        "projectPath": "C:\\Users\\Malphatt\\OneDrive\\Documents\\__Work__\\University\\Year 1\\CMP1903M (Object-Oriented Programming)\\Assessment 2\\CMP1903M-Object-Oriented-Programming-A02\\CMP1903M-A02-2223\\CMP1903M-A02-2223.csproj",
+        "packagesPath": "C:\\Users\\Malphatt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Malphatt\\OneDrive\\Documents\\__Work__\\University\\Year 1\\CMP1903M (Object-Oriented Programming)\\Assessment 2\\CMP1903M-Object-Oriented-Programming-A02\\CMP1903M-A02-2223\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Malphatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

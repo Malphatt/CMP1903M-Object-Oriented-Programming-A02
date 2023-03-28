@@ -1,0 +1,29 @@
+{
+    "folders": [
+        {
+            "path": "CMP1903M-A02-2223"
+        }
+    ],
+    "settings": {
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#40f08f",
+            "activityBar.background": "#40f08f",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#a86bf3",
+            "activityBarBadge.foreground": "#15202b",
+            "commandCenter.border": "#15202b99",
+            "sash.hoverBorder": "#40f08f",
+            "statusBar.background": "#13ea74",
+            "statusBar.foreground": "#15202b",
+            "statusBarItem.hoverBackground": "#0fbb5d",
+            "statusBarItem.remoteBackground": "#13ea74",
+            "statusBarItem.remoteForeground": "#15202b",
+            "titleBar.activeBackground": "#13ea74",
+            "titleBar.activeForeground": "#15202b",
+            "titleBar.inactiveBackground": "#13ea7499",
+            "titleBar.inactiveForeground": "#15202b99"
+        },
+        "peacock.color": "#13ea74"
+    }
+}
