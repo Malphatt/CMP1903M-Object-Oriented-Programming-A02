@@ -73,14 +73,7 @@ namespace CMP1903M_A02_2223 {
         // They are all private as they are only used by Calculate()
 
         String Division(String x, String y) {
-            float result = float.Parse(x) / float.Parse(y);
-            // If the result is a whole number, return the result in int format
-            // Otherwise return the result as a float to 2 decimal places
-            if (result % 1 == 0) {
-                return ((int)result).ToString();
-            } else {
-                return result.ToString("0.00");
-            }
+            return (float.Parse(x) / float.Parse(y)).ToString();
         }
 
         String Multiplication(String x, String y) {

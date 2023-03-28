@@ -54,6 +54,7 @@ namespace CMP1903M_A02_2223 {
 
         }
 
+        // Show the instructions of use
         void showInstructions() {
                 
                 Console.Write("\n  1. Upon dealing a number of cards you will be presented with a Year 1 / Year 2 math problem."
@@ -68,11 +69,15 @@ namespace CMP1903M_A02_2223 {
                 Console.ReadLine();
         }
 
+        // Deal the cards and ask the user for their answer
         void dealCards(int amount) {
 
+            // Deal the cards
             List<Card> cards = Pack.dealCard(amount);
+            // Create an array to store the math problem
             String[] cardMathArray = new String[amount];
 
+            // Add the cards to the math problem array
             for (int i = 0; i < amount; i++) {
                 if (i % 2 == 0) {
                     cardMathArray[i] = cards[i].Value.ToString();
@@ -81,8 +86,21 @@ namespace CMP1903M_A02_2223 {
                 }
             }
 
+
+            // Calculate the answer to the math problem
             String answer = new BODMASCalculator().Calculate(cardMathArray);
 
+
+            float answerFloat = float.Parse(answer);
+            // If the answer is a whole number, leave it in its current format
+            // Otherwise round it to 2 decimal places
+            if (answerFloat % 1 == 0) {
+                answer = ((int)answerFloat).ToString();
+            } else {
+                answer = answerFloat.ToString("0.00");
+            }
+
+            // Show the user the math problem and ask for their answer
             Console.Write("\nWhat is the answer to the following equation: ");
             for (int i = 0; i < amount; i++) {
                 Console.Write(cardMathArray[i] + " ");
@@ -91,15 +109,17 @@ namespace CMP1903M_A02_2223 {
 
             String? input = Console.ReadLine();
 
+            // If the user enters a valid answer, check if it is correct or incorrect
             if (input == answer) {
                 Console.WriteLine("Correct!");
-                statistics.CorrectAnswer(true);
+                statistics.CorrectAnswer(true); // Add 1 to the correct answer count and add 1 to the total answer count
             } else {
                 Console.WriteLine("Incorrect!");
                 Console.WriteLine("The correct answer is: " + answer);
-                statistics.CorrectAnswer(false);
+                statistics.CorrectAnswer(false); // Add 1 to the incorrect answer count and add 1 to the total answer count
             }
 
+            // Ask the user if they would like to deal again or return to the main menu
             bool againSuccess = false;
             while(!againSuccess) {
 
@@ -129,6 +149,7 @@ namespace CMP1903M_A02_2223 {
 
         }
 
+        // Quit the program
         void quitProgram() {
             
             Console.WriteLine("\nGoodbye!\n");
