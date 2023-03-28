@@ -13,8 +13,8 @@
 
         static void Main(string[] args) {
 
-            new Menu();
-            // Console.WriteLine(new BODMASCalculator().Calculate(new String[9] { "1", "+", "2", "*", "3", "-", "4", "/", "5" }));
+            // new Test(); // Test the BODMAS Calculator
+            new Menu(); // Create a new menu
         }
     }
 }

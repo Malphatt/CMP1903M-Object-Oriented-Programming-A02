@@ -2,6 +2,8 @@ namespace CMP1903M_A02_2223 {
 
     class Menu {
 
+        Stats statistics = new Stats(); // Create a new stats object
+
         bool repeat = true; // Boolean to control the main menu loop
 
         public Menu() {
@@ -22,7 +24,7 @@ namespace CMP1903M_A02_2223 {
 
         void mainMenu() {
 
-            Console.Write("\nPlease select an option from the menu below:\n  1. Instructions\n  2. Deal 3 Cards\n  3. Quit\nEnter your selection: ");
+            Console.Write("\nPlease select an option from the menu below:\n  1. Instructions\n  2. Deal 3 Cards\n  3. Deal 5 Cards\n  4. Quit\nEnter your selection: ");
 
             string? input = Console.ReadLine();
 
@@ -39,6 +41,10 @@ namespace CMP1903M_A02_2223 {
                 return;
             } else
             if (input == "3") {
+                dealCards(5);
+                return;
+            } else
+            if (input == "4") {
                 quitProgram();
                 return;
             } else {
@@ -87,9 +93,11 @@ namespace CMP1903M_A02_2223 {
 
             if (input == answer) {
                 Console.WriteLine("Correct!");
+                statistics.CorrectAnswer(true);
             } else {
                 Console.WriteLine("Incorrect!");
                 Console.WriteLine("The correct answer is: " + answer);
+                statistics.CorrectAnswer(false);
             }
 
             bool againSuccess = false;
