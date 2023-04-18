@@ -50,14 +50,6 @@ namespace CMP1903M_A02_2223 {
                     result = Subtraction(input[highestPriorityOperatorLocation - 1], input[highestPriorityOperatorLocation + 1]);
                 }
 
-                //show the contents of the input array to console
-                for(int i = 0; i < input.Length; i++) {
-                    Console.WriteLine(input[i] + " ");
-                }
-                Console.WriteLine("Highest Priority Operator Location: " + highestPriorityOperatorLocation);
-                Console.WriteLine("Highest Priority Operator: " + highestPriorityOperator);
-
-
                 // Replace the 3 values in the input array with the result
                 List<String> inputList = input.ToList();
                 inputList.RemoveRange(highestPriorityOperatorLocation - 1, 3);
