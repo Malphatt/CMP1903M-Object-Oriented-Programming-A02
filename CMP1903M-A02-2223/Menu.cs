@@ -57,13 +57,13 @@ namespace CMP1903M_A02_2223 {
         // Show the instructions of use
         void showInstructions() {
                 
-                Console.Write("\n  1. Upon dealing a number of cards you will be presented with a Year 1 / Year 2 math problem."
-                    + "\n  2. You will be asked to solve the problem and enter your answer."
-                    + "\n  3. If your answer is correct or incorrect you will be told so."
-                    + "\n  4. You will be able to deal the same number of cards after entering the answer."
-                    + "\n  5. You will also be able to return to the main menu after dealing the cards."
-                    + "\n  6. Remember to use the BODMAS rule when solving the problem, divisions are formatted to 2 decimal places where necessary (make sure to round up or down)."
-                    + "\n  7. You can quit the program by selecting the 'Quit' option from the main menu."
+                Console.Write("\n  - Upon dealing a number of cards you will be presented with a Year 1 / Year 2 math problem."
+                    + "\n  - You will be asked to solve the problem and enter your answer."
+                    + "\n  - If your answer is correct or incorrect you will be told so."
+                    + "\n  - You will be able to deal the same number of cards after entering the answer."
+                    + "\n  - You will also be able to return to the main menu after dealing the cards."
+                    + "\n  - Remember to use the BODMAS rule when solving the problem, divisions are formatted to 2 decimal places where necessary (make sure to round up or down)."
+                    + "\n  - You can quit the program by selecting the 'Quit' option from the main menu."
                     + "\n\nPress ENTER to return to the main menu...");
 
                 Console.ReadLine();
@@ -90,14 +90,16 @@ namespace CMP1903M_A02_2223 {
             // Calculate the answer to the math problem
             String answer = new BODMASCalculator().Calculate(cardMathArray);
 
-
-            float answerFloat = float.Parse(answer);
+            decimal answerDecimal = decimal.Parse(answer);
             // If the answer is a whole number, leave it in its current format
             // Otherwise round it to 2 decimal places
-            if (answerFloat % 1 == 0) {
-                answer = ((int)answerFloat).ToString();
+            if (answerDecimal % 1 == 0) {
+                answer = ((int)answerDecimal).ToString();
+            } else
+            if (answerDecimal % 0.1m == 0.0m) {
+                answer = answerDecimal.ToString("0.0");
             } else {
-                answer = answerFloat.ToString("0.00");
+                answer = answerDecimal.ToString("0.00");
             }
 
             // Show the user the math problem and ask for their answer

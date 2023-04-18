@@ -1,6 +1,6 @@
 ﻿namespace CMP1903M_A02_2223 {
 
-    class Card {
+        class Card : CardOperator {
 
         public Card(int suit, int value) {
             Suit = suit;
@@ -32,13 +32,21 @@
             }
         }
 
-        // Replacing the overridden ToString method
-        // to return the suit of the card in the form of a mathematical operator
+        // Overriding the ToString method to return a string representation of the card
+        // This is used to print the card to the console
+        // I decided to use a string array to store the values and suits of the cards
+        // This is because it is easier to access the values and suits of the cards using the index of the array
+        public override String ToString() {
+
+            String[] cardSuits = new String[4] { "Spades", "Hearts", "Clubs", "Diamonds" };
+            String[] cardValues = new String[13] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+
+            return cardValues[Value - 1] + " of " + cardSuits[Suit - 1];
+        }
+
+        // calls the abstract class CardOperator to get the suit of the card in the form of a mathematical operator
         public String GetOperator() {
-
-            String[] cardSuits = new String[4] { "+", "-", "*", "/" };
-
-            return cardSuits[Suit - 1];
+            return GetOperator(Suit);
         }
     }
 }

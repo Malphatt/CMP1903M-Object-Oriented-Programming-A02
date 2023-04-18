@@ -22,23 +22,15 @@ namespace CMP1903M_A02_2223 {
                 String highestPriorityOperator = "";
                 for (int i = input.Length - 2; i >= 0; i -= 2) {
 
-                    if (input[i] == "/") {  // Highest priority
+                    // Check if the operator is the highest priority
+                    if (input[i] == "*" || highestPriorityOperator == "/") {
                         highestPriorityOperatorLocation = i;
-                        highestPriorityOperator = "/";
+                        highestPriorityOperator = input[i];
                     } else
-                    if (input[i] == "*" && highestPriorityOperator != "/") {
+                    if ((input[i] == "+" || input[i] == "-") && !(highestPriorityOperator == "/" || highestPriorityOperator == "*")) {
                         highestPriorityOperatorLocation = i;
-                        highestPriorityOperator = "*";
-                    } else
-                    if (input[i] == "+" && highestPriorityOperator != "/" && highestPriorityOperator != "*") {
-                        highestPriorityOperatorLocation = i;
-                        highestPriorityOperator = "+";
-                    } else                  // Lowest priority
-                    if (input[i] == "-" && highestPriorityOperator != "/" && highestPriorityOperator != "*" && highestPriorityOperator != "+") {
-                        highestPriorityOperatorLocation = i;
-                        highestPriorityOperator = "-";
+                        highestPriorityOperator = input[i];
                     }
-
                 }
                 
 
@@ -72,19 +64,19 @@ namespace CMP1903M_A02_2223 {
         // They take 2 values and return the result of the calculation
         // They are all private as they are only used by Calculate()
 
-        String Division(String x, String y) {
+        protected String Division(String x, String y) {
             return (float.Parse(x) / float.Parse(y)).ToString();
         }
 
-        String Multiplication(String x, String y) {
+        protected String Multiplication(String x, String y) {
             return (float.Parse(x) * float.Parse(y)).ToString();
         }
 
-        String Addition(String x, String y) {
+        protected String Addition(String x, String y) {
             return (float.Parse(x) + float.Parse(y)).ToString();
         }
 
-        String Subtraction(String x, String y) {
+        protected String Subtraction(String x, String y) {
             return (float.Parse(x) - float.Parse(y)).ToString();
         }
     }
