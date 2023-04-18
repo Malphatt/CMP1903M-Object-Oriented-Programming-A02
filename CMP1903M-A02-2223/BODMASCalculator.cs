@@ -16,6 +16,8 @@ namespace CMP1903M_A02_2223 {
             
             // Loop through the input array until there is only 1 value left (the result)
             while (input.Length > 1) {
+
+                Console.WriteLine("Pass");
                 
                 // Loop through the operators from the last one and find the highest priority operator location (BODMAS)
                 int highestPriorityOperatorLocation = 0;
@@ -23,7 +25,7 @@ namespace CMP1903M_A02_2223 {
                 for (int i = input.Length - 2; i >= 0; i -= 2) {
 
                     // Check if the operator is the highest priority
-                    if (input[i] == "*" || highestPriorityOperator == "/") {
+                    if (input[i] == "/" || input[i] == "*") {
                         highestPriorityOperatorLocation = i;
                         highestPriorityOperator = input[i];
                     } else
@@ -47,6 +49,13 @@ namespace CMP1903M_A02_2223 {
                 if (input[highestPriorityOperatorLocation] == "-") {
                     result = Subtraction(input[highestPriorityOperatorLocation - 1], input[highestPriorityOperatorLocation + 1]);
                 }
+
+                //show the contents of the input array to console
+                for(int i = 0; i < input.Length; i++) {
+                    Console.WriteLine(input[i] + " ");
+                }
+                Console.WriteLine("Highest Priority Operator Location: " + highestPriorityOperatorLocation);
+                Console.WriteLine("Highest Priority Operator: " + highestPriorityOperator);
 
 
                 // Replace the 3 values in the input array with the result

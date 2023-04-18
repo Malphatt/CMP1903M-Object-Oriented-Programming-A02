@@ -1,57 +1,50 @@
 namespace CMP1903M_A02_2223 {
 
-    class Menu {
+    interface IMenu {
+        void mainMenu();
+    }
+
+    class Menu : IMenu {
 
         Stats statistics = new Stats(); // Create a new stats object
 
         bool repeat = true; // Boolean to control the main menu loop
 
         public Menu() {
+            Console.WriteLine("\nWelcome to the MathTutor Program"); // Welcome message
+        }
+
+
+        public void mainMenu() {
             new Pack(); // Create a new pack of cards
 
-            Console.WriteLine("\nWelcome to the MathTutor Program"); // Welcome message
-
             while (repeat) {
-
                 // This is done to ensure the pack will not run out of cards
                 Pack.ResetPack(); // Reset the pack of cards
                 Pack.shuffleCardPack(1); // Shuffle the pack of cards using the Fisher Yates Shuffle
 
-                // Show the main menu
-                mainMenu();
+                Console.Write("\nPlease select an option from the menu below:\n  1. Instructions\n  2. Deal 3 Cards\n  3. Deal 5 Cards\n  4. Quit\nEnter your selection: ");
+
+                string? input = Console.ReadLine();
+
+                if (input == null || input == "") {
+                    Console.WriteLine("Please enter a valid input");
+                } else
+                if (input == "1") {
+                    showInstructions();
+                } else
+                if (input == "2") {
+                    dealCards(3);
+                } else
+                if (input == "3") {
+                    dealCards(5);
+                } else
+                if (input == "4") {
+                    quitProgram();
+                } else {
+                    Console.WriteLine("Please enter a valid input");
+                }
             }
-        }
-
-        void mainMenu() {
-
-            Console.Write("\nPlease select an option from the menu below:\n  1. Instructions\n  2. Deal 3 Cards\n  3. Deal 5 Cards\n  4. Quit\nEnter your selection: ");
-
-            string? input = Console.ReadLine();
-
-            if (input == null || input == "") {
-                Console.WriteLine("Please enter a valid input");
-                return;
-            } else
-            if (input == "1") {
-                showInstructions();
-                return;
-            } else
-            if (input == "2") {
-                dealCards(3);
-                return;
-            } else
-            if (input == "3") {
-                dealCards(5);
-                return;
-            } else
-            if (input == "4") {
-                quitProgram();
-                return;
-            } else {
-                Console.WriteLine("Please enter a valid input");
-                return;
-            }
-
         }
 
         // Show the instructions of use

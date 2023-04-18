@@ -14,7 +14,7 @@
         static void Main(string[] args) {
 
             // new Test(); // Test the BODMAS Calculator
-            new Menu(); // Create a new menu
+            new Menu().mainMenu(); // Create a new menu
         }
     }
 }
