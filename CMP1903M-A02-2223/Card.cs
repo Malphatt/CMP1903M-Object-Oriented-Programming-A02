@@ -1,6 +1,13 @@
 ﻿namespace CMP1903M_A02_2223 {
 
-        class Card : CardOperator {
+    interface ICard {
+
+        int Value { get; set; }
+        int Suit { get; set; }
+
+    }
+
+    class Card : CardOperator, ICard {
 
         public Card(int suit, int value) {
             Suit = suit;

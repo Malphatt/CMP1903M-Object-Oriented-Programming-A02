@@ -16,8 +16,6 @@ namespace CMP1903M_A02_2223 {
             
             // Loop through the input array until there is only 1 value left (the result)
             while (input.Length > 1) {
-
-                Console.WriteLine("Pass");
                 
                 // Loop through the operators from the last one and find the highest priority operator location (BODMAS)
                 int highestPriorityOperatorLocation = 0;
