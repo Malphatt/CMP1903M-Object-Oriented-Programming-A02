@@ -81,7 +81,7 @@ namespace CMP1903M_A02_2223 {
 
 
             // Calculate the answer to the math problem
-            String answer = new BODMASCalculator().Calculate(cardMathArray);
+            String answer = BODMASCalculator.Calculate(cardMathArray);
 
             decimal answerDecimal = decimal.Parse(answer);
             // If the answer is a whole number, leave it in its current format

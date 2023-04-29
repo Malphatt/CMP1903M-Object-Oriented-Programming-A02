@@ -12,5 +12,10 @@
 3. Type `dotnet run` in the TERMINAL and press ENTER
 4. The program will run and you will be able to interact with it
 
+or
+
+1. Open `RUN_PROGRAM.bat`
+2. The program will run and you will be able to interact with it
+
 ## Dependencies
 - `.NET 7.0 SDK` is required to run this code (https://dotnet.microsoft.com/en-us/download).

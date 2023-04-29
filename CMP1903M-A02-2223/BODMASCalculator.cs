@@ -6,7 +6,7 @@ namespace CMP1903M_A02_2223 {
         // and return the result of the calculation
         // If the input is invalid, it will return -1
         // calls other methods to calculate the result
-        public String Calculate(String[] input) {
+        public static String Calculate(String[] input) {
 
             if (input.Length % 2 == 0) { // Checks if the input is valid (must be odd length)
                 return "Invalid Input";
@@ -63,19 +63,19 @@ namespace CMP1903M_A02_2223 {
         // They take 2 values and return the result of the calculation
         // They are all private as they are only used by Calculate()
 
-        protected String Division(String x, String y) {
+        protected static String Division(String x, String y) {
             return (float.Parse(x) / float.Parse(y)).ToString();
         }
 
-        protected String Multiplication(String x, String y) {
+        protected static String Multiplication(String x, String y) {
             return (float.Parse(x) * float.Parse(y)).ToString();
         }
 
-        protected String Addition(String x, String y) {
+        protected static String Addition(String x, String y) {
             return (float.Parse(x) + float.Parse(y)).ToString();
         }
 
-        protected String Subtraction(String x, String y) {
+        protected static String Subtraction(String x, String y) {
             return (float.Parse(x) - float.Parse(y)).ToString();
         }
     }

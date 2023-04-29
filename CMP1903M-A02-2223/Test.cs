@@ -12,7 +12,7 @@ namespace CMP1903M_A02_2223 {
                 String[] question = mathQuestion.Split(' ');
     
                 // Calculate the result
-                String result = new BODMASCalculator().Calculate(question);
+                String result = BODMASCalculator.Calculate(question);
 
                 Console.WriteLine(mathQuestion + " = " + result);
                 Console.WriteLine("Program Result: " + mathAnswer);
